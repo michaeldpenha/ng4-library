@@ -1,0 +1,14 @@
+<div *ngFor="let components of listOfComponents; trackBy: index">
+  <div  class="panel panel-default" [routerLink]="'/' + components.componentURLRedirect">
+      <div class="panel-heading {{activeSidebarComponent ==  components.componentURLRedirect ? 'sidebarSelected': ''}}" >
+        <h4 class="panel-title">
+          <a data-toggle="collapse" [attr.data-target]="'#' + components.componentName">{{components.componentName}}</a>
+        </h4>
+      </div>
+      <div id="{{components.componentName}}" class="panel-collapse collapse">
+        <ul class="list-group" *ngFor="let childComponents of components.childComponents; trackBy: index">
+          <li class="list-group-item" [routerLink]="'/' + components.componentURLRedirect">{{childComponents.componentName}}</li>
+        </ul>
+    </div>
+  </div>
+</div>

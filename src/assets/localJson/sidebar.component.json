@@ -1,0 +1,10 @@
+[{
+  "componentName":"Home",
+	"componentURLRedirect" : ""
+ },{
+  "componentName":"Checbox",
+	"componentURLRedirect" : "checkbox"
+ },{
+  "componentName":"Tooltip",
+	"componentURLRedirect" : "tooltip"
+ }]
